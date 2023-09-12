@@ -22,7 +22,6 @@ ROW.className = 'row';
 
 
 function intentar(){
-    if(intentos>0){
         const INTENTO = leerIntento();
     const GRID = document.getElementById("grid");
     const ROW = document.createElement('div');
@@ -53,7 +52,7 @@ function intentar(){
            if (intentos==0){
                terminar("<h1>PERDISTE!</h1>");
            }
-        }
+        
     
     
 }
@@ -76,7 +75,7 @@ function terminar(mensaje){
     const INPUT = document.getElementById("guess-input");
     const BOTON = document.getElementById("guess-button");
     INPUT.disabled = true;
-    BOTON.disabled = false;
+    BOTON.disabled = true;
     let contenedor = document.getElementById('guesses');
     contenedor.innerHTML = mensaje;
 }
